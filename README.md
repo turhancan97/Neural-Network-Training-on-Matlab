@@ -19,7 +19,7 @@ This report presents how artificial neural networks can be used in letter recogn
 Neural networks are closely modeled on biological processes for information processing, including specifically the nervous system and its basic unit, the neuron. Signals are propagated in the form of potential differences between the inside and outside of cells. The main components of a neuronal cell are shown in Figure 1. Dendrites bring signals from other neurons into the cell body or soma, possibly multiplying each incoming signal by a transfer weighting coefficient. In the soma, cell capacitance integrates the signals which collect in the axon hillock. Once the composite signal exceeds a cell threshold, a signal, the action potential, is transmitted through the axon. Cell nonlinearities make the composite action potential a nonlinear function of the combination of arriving signals. The axon connects through synapses with the dendrites of subsequent neurons. The synapses operate through the discharge of neurotransmitter chemicals across intercellular gaps, and can be either excitatory (tending to fire the next neuron) or inhibitory (tending to prevent firing of the next neuron) [1].
 
 ![image](https://user-images.githubusercontent.com/22428774/140934752-3058560e-7fce-4044-96eb-f51024154e09.png)
-Figure 1 - Neuron Anatomy
+>Figure 1 - Neuron Anatomy
 
 ### Neuron Mathematical Model:
 Neural networks are set of algorithms inspired by the functioning of human brian. Generally when you open your eyes, what you see is called data and is processed by the Neurons (data processing cells) in your brain, and recognizes what is around you. That’s how similar the Neural Networks works. They takes a large set of data, process the data (draws out the patterns from data), and outputs what it is. What they do? Neural networks sometimes called as Artificial Neural networks (ANN’s), because they are not natural like neurons in your brain. They artificially mimic the nature and functioning of neural network. ANN’s are composed of a large number of highly interconnected processing elements (neurons) working in unison to solve specific problems. ANNs, like people, like child, they even learn by example. An ANN is configured for a specific application, such as pattern recognition or data classification, image recognition, voice recognition through a learning process. 
@@ -34,7 +34,7 @@ The most common type of artificial neural network consists of three groups, or l
 * Output units - The behavior of the output units depends on the activity of the hidden units and the weights between the hidden and output units. this also called output layer.
  
 ![image](https://user-images.githubusercontent.com/22428774/140935526-bdb53ea8-0bc0-4fce-b80a-34a07afbe3a0.png)
-Figure 2 - Neural Network with Input, Hidden and Output layer [2]
+>Figure 2 - Neural Network with Input, Hidden and Output layer [2]
 
 So the circles are called neurons. One list of neurons is a layer: the first layer is the input layer, while the last one (in our case, represented by only one neuron) is the output layer; those in the middle, on the other hand, are the hidden layers. Finally, all the interconnections among neurons are our synapses. 
 The main elements of NN are, in conclusion, neurons and synapses, both in charge of computing mathematical operations. Yes, because NNs are nothing but a series of mathematical computations: each synapsis holds a weight, while each neuron computes a weighted sum using input data and synapses’ weights [3].
@@ -153,28 +153,28 @@ n = -5:0.1:5;
 plot(n,hardlim(n),'r+:');
 % Plot the following functions: purelin, logsig, tansig, satlin.
 ```
-Figure 3 - Introduction Code
+>Figure 3 - Introduction Code
 
 In the Figure below, we introduced how to create neural network on Matlab. Now, I will explain every line one by one. We created 1x11 vector for teaching input in line 7. After that, we created again 1x11 vector for teaching output in line 9. Later, in line 13 free neural network was created. It has [0 10] input vector and [5 1] output vector. ‘tansig’ means that first activation function is hyperbolic tangent sigmoid transfer function (Figure 4) and ‘purelin’ means that second activation function is linear transfer function (Figure 4). 
 
 ![image](https://user-images.githubusercontent.com/22428774/140939328-6a6bcd91-598f-4bd0-be8b-0ba64a862512.png)
-Figure 4 - tansig and purelin
+>Figure 4 - tansig and purelin
 
 `net.trainParam.epochs =  50;`  is for number of teaching the network which means epoch number. In this case we decided 50 times.
 
 at `[net, tr, Y, E]  =  train(net,P,T);` section,  we finally trained the neural network with 50 epoch. Finally, we can check our accuracy and simulate our network as `A =  sim(net, P);` You can see our simulated network in Figure 5.
 
 ![image](https://user-images.githubusercontent.com/22428774/140939614-b8334dd9-f244-4262-97b9-dee387380343.png)
-Figure 5 - Trained Network
+>Figure 5 - Trained Network
 
 
 Now let’s check the performance (Figure 6). As you see in Figure 6, we reached the best performance at 28th epoch. So, we can adjust our epoch number to 28 so that it will be more efficient. Last rows on the code shows that how to visualize the activation functions. In our code it show the step function (hardlim). But we can also visualize other functions like tansig and purelim (Figure 7)
 
 ![image](https://user-images.githubusercontent.com/22428774/140939768-afdb57ac-bd97-4b55-84d4-d2b2d4af091a.png)
-Figure 6 – Performance
+>Figure 6 – Performance
 
 ![image](https://user-images.githubusercontent.com/22428774/140939791-50d2510a-1ae5-4b98-8d52-5a39c0de983e.png)
-Figure 7 - Activation Function Visualization
+>Figure >7 - Activation Function Visualization
 
 Now that we have explained how we create an artificial neural network with Matlab, we can begin to describe our first project.
 
@@ -214,7 +214,7 @@ PZ = [1 1 1 1 1  0 0 0 0 1  0 0 0 1 0  0 0 1 0 0  0 1 0 0 0  1 0 0 0 0  1 1 1 1 
 % PA' -> Tanspose
 P = [PA' PB' PC' PD' PE' PF' PG' PH' PI' PJ' PK' PL' PM' PN' PO' PP' PQ' PR' PS' PT' PU' PV' PW' PX' PY' PZ'];
 ```
-Figure 8 - Letter Recognition Input Vectors
+>Figure 8 - Letter Recognition Input Vectors
 
 Later, all letters were put into one input matrix which name is P.
 
@@ -248,7 +248,7 @@ TY = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0];
 TZ = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1];
 T = [TA' TB' TC' TD' TE' TF' TG' TH' TI' TJ' TK' TL' TM' TN' TO' TP' TQ' TR' TS' TT' TU' TV' TW' TX' TY' TZ'];
 ```
-Figure 9 – Letter Recognition Target Vector
+>Figure 9 – Letter Recognition Target Vector
 
 After input vector was defined, target (output) vector was created. Every letter has 1x26 vector. For example, A has 1 in first column and others are 0. Also, Z has 1 in last column and others are zero. At the end, we put all target vectors into one matrix which name is T. We will later use this output vector to see if our prediction is true.
 
@@ -267,35 +267,35 @@ ansC = sim(net,PC');
 ansD = sim(net,PD');
 ansALL = sim(net,P);
 ```
-Figure 10 - Letter Recognition Neural Network
+>Figure 10 - Letter Recognition Neural Network
 
 After input and target vectors were defined, free neural network was created and then it was trained with 50 epoch. Our neural network (newff) function has a argument range. Range has 2x35 matrix because our input vectors has 7x5 which means their size is 35 and they can have either 1 or 0. Other argument [30 20 10 26] means that it has three hidden layers in the size of 30, 20 and 10. Also, it has output in the size of 26 because we have 26 letters in English Alphabet. Then, our result was simulated. You can see our result below in Figure 11, Figure 12 and Figure 13.
 
 ![image](https://user-images.githubusercontent.com/22428774/140940555-3fb57f24-babc-4719-8f5b-2e5599ed91dc.png)
-Figure 11 - Letter Recognition newff Function Result
+>Figure 11 - Letter Recognition newff Function Result
 
 ![image](https://user-images.githubusercontent.com/22428774/140940573-61dc528d-ff1b-49a3-a54e-b8970ef6c9ba.png)
-Figure 12 - Letter Recognition Performance
+>Figure 12 - Letter Recognition Performance
 
 In Figure 12, we can see that around 10th epoch we have always same mean squared error so that we can adjust our epoch number to 10 because it will cost less. 
 
 ![image](https://user-images.githubusercontent.com/22428774/140940611-9351025a-8fc2-4f4c-a18d-15c1293d9071.png)
-Figure 13 - Letter Recognition Result of Letter A, B, C and D
+>Figure 13 - Letter Recognition Result of Letter A, B, C and D
 
 As you see in Figure 13, we have result for letter A, B, C and D. For example, letter A has highest probability at 1st row. It is reasonable because A is 1st letter. Also, B has highest probability in 2nd row and so on. This result shows that we have correct prediction but not perfect we can still improve our accuracy. Let’s check the martix for result of the all letters.  
 
 ![image](https://user-images.githubusercontent.com/22428774/140940675-c1eabc08-2d1a-4854-8367-0698c4e13de1.png)
 ![image](https://user-images.githubusercontent.com/22428774/140940686-47b76e5e-5489-411d-9c1b-d133c022feba.png)
 ![image](https://user-images.githubusercontent.com/22428774/140940699-d814e5f2-5f9c-4269-b742-58b0d5075507.png)
-Figure 14 - Letter Recognition Result for All Letters
+>Figure 14 - Letter Recognition Result for All Letters
 
 It is obvious that the diagonal of the “ansALL” matrix has always the highest element for every row so that we prove that we have good neural network training. However, as I told you before we can optimize and get better predictions. Let’s optimize and check our results.
 
 ![image](https://user-images.githubusercontent.com/22428774/140940758-3f7c9f05-4c89-406f-8b70-653f53997cd5.png)
-Figure 15 - Letter Recognition Optimized Result of Letter A, B, C and D
+>Figure 15 - Letter Recognition Optimized Result of Letter A, B, C and D
 
 ![image](https://user-images.githubusercontent.com/22428774/140940786-9beee1af-d28d-4170-8935-dbf125fbbd26.png)
-Figure 16 - Letter Recognition Optimized Performance
+>Figure 16 - Letter Recognition Optimized Performance
 
 As you see in Figure 15 and Figure 16 our predictions look perfect. The optimization was made by decreasing the number of the hidden layers. The reason why hidden layers numbers were decreased is hidden layers are useful for more complex problems, they extract some features from inputs such as images. However, for this problem, it is unnecessary to apply a lot of hidden layers. We have used 8 epochs because it reached the best MSE at the 8th epoch. 
 
@@ -310,11 +310,12 @@ pA_err = PA;
 pA_err(2:4) = 0.88;
 error_A=sim(net,pA_err')
 ```
-Figure 17 - Letter Recognition with Noise
+>Figure 17 - Letter Recognition with Noise
 
 I added some different values like 0.88 to the input vector just for the letter A. Before adding the noise we had a perfect prediction. Let’s see now how it change.
+
 ![image](https://user-images.githubusercontent.com/22428774/140941112-fd23cebe-891f-4c8d-9e61-44bd1a0fb512.png)
-Figure 18 - Noisy Result
+>Figure 18 - Noisy Result
 
 As you see in Figure 18, we still have good prediction for letter A but the probability has decreased. This is end of the first project. Now it is time for explaining project 2.
 
@@ -323,7 +324,8 @@ As you see in Figure 18, we still have good prediction for letter A but the prob
 In this project, our aim is to give 5 different images (Figure 19) which are 210x240 pixels to the neural network in the form of binary, train them and finally correctly predict the image after training. Let’s first check our MATLAB code one by one. Firstly 5 different images were added to MATLAB as shown in Figure 20. Also, the size function is used to check the size of the images.
 
 ![image](https://user-images.githubusercontent.com/22428774/140941204-7c056664-a46e-4c88-a31f-f96ffc7b5752.png)
-Figure 19 - 210x240 Pixel 5 Images
+>Figure 19 - 210x240 Pixel 5 Images
+
  ```matlab
 %% Image Recognition Extended
 image1 = imread("image1.jpg"); % Reading image - 1
@@ -338,7 +340,7 @@ size(image3)
 size(image4)
 size(image5)
 ```
-Figure 20 - Reading Images on MATLAB
+>Figure 20 - Reading Images on MATLAB
 
 When the size of the images was checked, it was seen that the images have a 210x240x3 matrix which means it is 3 dimensions. We already know that 210x240 is pixel number but what is the meaning of 3? 
 This 3 means that it has three colors (Red, Green, Blue). Therefore, it is better to convert it to gray scale to avoid complexity as shown in Figure 21.
@@ -356,9 +358,10 @@ imshow(image4_gray)
 image5_gray = rgb2gray(image5); 
 imshow(image5_gray)
 ```
-Figure 21 - Image Recognition from RGB to Gray Scale on MATLAB
+>Figure 21 - Image Recognition from RGB to Gray Scale on MATLAB
 
 As it is known that each image has 210x240 matrixes and there are 5 images. Each pixel is an input for ANN so that we have a huge amount of pixels. If we don’t have a very powerful computer, it will take so long time for each epoch in ANN. Therefore, it is better to decrease the size of each image by `imresize` function on MATLAB (Figure 22).
+
  ```matlab
 %% Let's resize for the ANN 
 P1=imresize(image1_gray,[20 20]);
@@ -374,9 +377,11 @@ P5=P5(:);
 % PA' -> Tanspose
 P = [P1 P2 P3 P4 P5];
 ```
-Figure 22 - Image Recognition Input Preparation
+>Figure 22 - Image Recognition Input Preparation
+
 As you can is in Figure 22, we converted each image into a column vector and put them to the input vector whose defined as P. Besides, our new size is 20x20 matrixes which mean 400 input per image. 
 After that, the target vector, free neural network, and epoch number were prepared as shown in Figure 23. Finally, the network is trained and simulated. Now, let’s discuss the results.
+
  ```matlab
 %% Target Vector
 T1 = [1 0 0 0 0];
@@ -400,18 +405,18 @@ ans5 = sim(net,P5);
 ansALL = sim(net,P);
 % YPred = classify(net,imdsValidation);
 ```
-Figure 23 - Image Recognition Target Vector, NN and Simulation
+>Figure 23 - Image Recognition Target Vector, NN and Simulation
 
 We have one hidden layer and 10 epochs for the ANN (Figure 24). According to performance (Figure 25), which is the mean squared error method, we have a 0.06 MSE value. This performance can be improved by tuning some hyperparameters such as changing hidden layer numbers or increasing epoch numbers. However, we still have good performance and results as it is seen in Figure 26 because every diagonal element has the highest probability. This means that, for example, the first diagonal element is the probability of prediction of image 1 so that we have a 93.46% chance to predict image 1 which is a very good performance.
 
 ![image](https://user-images.githubusercontent.com/22428774/140942032-84918a8e-1a42-4a7d-a7af-7c0e920ec7d5.png)
-Figure 24 - Image Recognition newff Function Result
+>Figure 24 - Image Recognition newff Function Result
 
 ![image](https://user-images.githubusercontent.com/22428774/140942091-dc03823a-cb1e-4cb1-b8ce-6cbaadb9c129.png)
-Figure 25 - Image Recognition Performance
+>Figure 25 - Image Recognition Performance
 
 ![image](https://user-images.githubusercontent.com/22428774/140942114-2fee7362-ee7b-4515-81fe-f7219dbbc6f6.png)
-Figure 26 - Image Recognition Final Result
+>Figure 26 - Image Recognition Final Result
 
 ## Conclusion
 In this repository mainly neural network was investigated. We learned how to create a free neural network, how to add data and train datasets. Also, we simulated our result to see how to correct the estimation we made. After applying basic neural network code, three different projects were explained. The first project aims to predict English Letters correctly. We gave every English Letter to the neural network in the form of binary, train them and finally correctly predict the letters after training. The second project aims to predict 5 different images correctly. We gave 5 different images which are 210x240 pixels to the neural network in the form of binary, train them, and finally correctly predict the image after training. 
