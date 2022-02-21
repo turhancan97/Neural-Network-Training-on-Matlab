@@ -44,6 +44,7 @@ The main elements of NN are, in conclusion, neurons and synapses, both in charge
 Perceptrons — invented by Frank Rosenblatt in 1958, are the simplest neural network that consists of n number of inputs, only one neuron, and one output, where n is the number of features of our dataset. The process of passing the data through the neural network is known as forward propagation and the forward propagation carried out in a perceptron is explained in the following three steps. 
 
 **Step 1:** For each input, multiply the input value xᵢ with weights wᵢ and sum all the multiplied values. Weights — represent the strength of the connection between neurons and decide how much influence the given input will have on the neuron’s output. If the weight w₁ has a higher value than the weight w₂, then the input x₁ will have a higher influence on the output than w₂.
+
 ![image](https://user-images.githubusercontent.com/22428774/140935896-92b05277-045c-41fe-8d27-dd56d67d9c61.png)
 
 The row vectors of the inputs and weights are x = [x1, x2, … , xn] and w =[w1, w2, … , wn] respectively and their dot product is given by
@@ -421,3 +422,10 @@ We have one hidden layer and 10 epochs for the ANN (Figure 24). According to per
 
 ## Conclusion
 In this repository mainly neural network was investigated. We learned how to create a free neural network, how to add data and train datasets. Also, we simulated our result to see how to correct the estimation we made. After applying basic neural network code, three different projects were explained. The first project aims to predict English Letters correctly. We gave every English Letter to the neural network in the form of binary, train them and finally correctly predict the letters after training. The second project aims to predict 5 different images correctly. We gave 5 different images which are 210x240 pixels to the neural network in the form of binary, train them, and finally correctly predict the image after training. 
+
+## Reference
+* [1] Lewis FL. Neural Network Control of Robot Manipulators and Nonlinear Systems. Taylor & Francis; 1999.
+* [2] https://purnasaigudikandula.medium.com/a-beginner-intro-to-neural-networks-543267bda3c8
+* [3] https://medium.com/dataseries/understanding-the-maths-behind-neural-networks-108a4ad4d4db
+* [4] https://towardsdatascience.com/introduction-to-math-behind-neural-networks-e8b60dbbdeba
+
